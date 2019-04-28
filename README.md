@@ -44,6 +44,12 @@ sudo cp ath.ko /lib/modules/$(uname -r)/kernel/drivers/net/wireless/ath
 ```
 
 ## Screen brightness tweak:
+Create the following brightness script file.
+```
+mkdir ~/scripts/
+nano ~/scripts/brightness.sh
+```
+
 ```
 #!/bin/sh
 CURRBRIGHT=$(xrandr --current --verbose | grep -m 1 'Brightness:' | cut -f2- -d:)
@@ -55,5 +61,9 @@ then
 xrandr --output $2 --brightness $(echo "$CURRBRIGHT - 0.1" | bc)
 fi
 ```
-
+Create a shortcut in Ubuntu :
+```
+CTRL + F2 => ~/scripts/brightness.sh - eDP-1
+CTRL + F3 => ~/scripts/brightness.sh + eDP-1
+```
 
