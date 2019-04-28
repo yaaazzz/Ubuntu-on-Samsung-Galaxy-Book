@@ -1,21 +1,50 @@
 # Ubuntu-on-Samsung-Galaxy-Book
 
 Welcome in the area where you will get the progress related to Ubuntu 19.04 on the Samsung Galaxy Book 12".
+All element and information can be used at your own risk.
 
-# What is working just after the Ubuntu installation:
+## What is working just after the Ubuntu installation:
   - UEFI : booting from external USB3 SSD
   - Keyboard cover
   - Touch sreen
   - Pen
   - Bluetooth
 
-# What is working with tweak:
+## What is working with tweak:
   - Wifi
   - Screen Brightness keyboard shortcut
   
-# What is not working yet:
+## What is not working yet:
   - Front Camera
   - Back Camera
   - Sound card
   - Pen calibration
   - Pen Button/Eraser
+  
+## Wifi tweak:
+```
+sudo apt-get install git build-essential
+git clone https://github.com/jeremyb31/ath-4.15.git
+cd ath-4.15
+cp /lib/modules/$(uname -r)/build/.config ./ 
+cp /lib/modules/$(uname -r)/build/Module.symvers ./
+make -C /lib/modules/$(uname -r)/build M=$(pwd) modules
+sudo cp ath.ko /lib/modules/$(uname -r)/kernel/drivers/net/wireless/ath
+sudo reboot
+```
+
+After other kernel updates you will need to do
+```
+cd ath-4.15
+make -C /lib/modules/$(uname -r)/build M=$(pwd) clean
+cp /lib/modules/$(uname -r)/build/.config ./ 
+cp /lib/modules/$(uname -r)/build/Module.symvers ./
+make -C /lib/modules/$(uname -r)/build M=$(pwd) modules
+sudo cp ath.ko /lib/modules/$(uname -r)/kernel/drivers/net/wireless/ath
+```
+
+## Screen brightness tweak:
+
+
+
+
