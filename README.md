@@ -17,3 +17,5 @@ Welcome in the area where you will get the progress related to Ubuntu 19.04 on t
   - Front Camera
   - Back Camera
   - Sound card
+  - Pen calibration
+  - Pen Button/Eraser
