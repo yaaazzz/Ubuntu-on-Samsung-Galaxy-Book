@@ -4,7 +4,7 @@ Welcome in the area where you will get the progress related to Ubuntu 19.04 on t
 All element and information can be used at your own risk.
 
 ## What is working just after the Ubuntu installation:
-  - UEFI : booting from external USB3 SSD
+  - UEFI : booting from external USB type C SSD
   - Keyboard cover
   - Touch sreen
   - Pen
