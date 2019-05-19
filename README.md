@@ -67,3 +67,8 @@ CTRL + F2 => ~/scripts/brightness.sh - eDP-1
 CTRL + F3 => ~/scripts/brightness.sh + eDP-1
 ```
 
+
+## Sound stay always silent:
+
+Unfortunatly for the moment there is no sound out of the box. Here is the alsa-test result link :
+http://alsa-project.org/db/?f=35c521abab94f8163105c8a52b6cbd17802a6eeb
